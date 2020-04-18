@@ -1,0 +1,104 @@
+*{                    /*   * означает, что распространяется на все элементы */
+    padding:0;        /*  в * указывается всё, что не наследуется */
+    margin:0;
+}
+
+body {
+    color: white;   /* в body указывается всё, что наследуется */
+}
+
+#root {
+    width: 600px;
+    height: 400px;
+}
+
+.screen .slides {
+    display:flex;
+    position: absolute;
+    left:0;
+    top:0;
+    
+}
+
+.screen {
+    overflow: hidden;
+    position: relative;
+    
+}
+
+.slides li {
+    list-style-type: none;
+    background-color: blue;
+    outline: 2px solid black;
+    font-size:80px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+
+
+
+.trigger {
+    background: none;
+    border:none;
+    padding:10px;
+    cursor: pointer;
+    font-size: 100px;
+    font-weight: 900;
+    position:absolute;
+    top:50%;
+    transform: translateY(-50%);   /*на сколько хотим сдвинуть*/
+    opacity:0;
+    transition:0.5s;
+}
+
+.trigger:hover {
+    opacity:1;
+}
+
+.trigger:focus {
+    outline:none;
+}
+
+.t-left {
+    left:0;
+}
+
+.t-right {
+    right:0;
+}
+
+.points {
+    position:absolute;
+    bottom:10px;
+    left:50%;
+    transform: translateX(-50%);
+    
+    display:flex;
+    justify-content: space-between;
+}
+
+.points li {
+    border-radius: 50%;
+    margin: 0 10px;
+    width:30px;
+    height:30px;
+    background-color: darkred;
+    list-style: none;
+    cursor: pointer;
+
+}
+
+
+/* .points li + li {
+    margin-left:10px;
+}
+
+*/
+
+.points li.active {
+    border:2px solid white;
+    width:26px;
+    height:26px;
+}
